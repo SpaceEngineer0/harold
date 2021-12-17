@@ -4,7 +4,7 @@ Simple discord bot with handful of commands.
 
 It can flip a coin, tell a joke, or play rock paper scissors.
 
-Open this repository with something like *vscode* and type `node .` in the terminal. The bot will be ready in a second.
+Insert your bot token in the `config.json` file, then type `node .` in the terminal. The bot will be ready in a few seconds.
 
 ## commands
 
