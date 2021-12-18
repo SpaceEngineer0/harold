@@ -1,4 +1,4 @@
-module.exports = (client) => {
+module.exports = (client, Discord) => {
 	const { readdirSync, readdir } = require('fs');
 
 	console.log('* Loading commands');

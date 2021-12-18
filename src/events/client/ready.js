@@ -1,8 +1,8 @@
 module.exports = {
 	name: 'ready',
 	once: true,
-	execute(client) {
+	execute(client, Discord) {
 		console.log('> harold is ready');
-		client.user.setPresence({ activity: { name: 'haroldhelp' }, status: 'online'});
+		client.user.setPresence({ activity: { name: `haroldhelp | prefix: ${client.prefix}` }, status: 'online'});
 	}
 }

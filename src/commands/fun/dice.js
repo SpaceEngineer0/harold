@@ -4,10 +4,17 @@ module.exports = {
 	usage: 'dice <n?>',
 	example: 'dice 20',
 	type: 'fun',
-	regex: /^dice( [0-9]+)?$/,
+	regex: /^dice( \d+)?$/,
 	permissions: [],
-	execute(message, args, client) {
-		var num = parseInt(args[0] = 7, 10);
-		message.reply(`Rolled ${Math.floor(Math.random() * (num - 1)) + 1}`);
+	execute(message, args, client, Discord) {
+		if (!args[0]) args[0] = 6;
+
+		parseInt(args[0], 10);
+		args[0]++;
+
+		message.channel.send(new Discord.MessageEmbed()
+			.setColor(client.embedColor)
+			.addField('Dice', `Rolled ${Math.floor(Math.random() * (args[0] - 1) + 1)}`)
+		)
 	}
 }

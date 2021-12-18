@@ -10,7 +10,7 @@ Open this repository with something like *vscode* and type `node .` in the termi
 
 Default prefix: `,`
 
-Arguments with `?` mean that it is optional
+Arguments with `?` are optional
 
 * `chelp <command>` explains a command `chelp echo`
 * `coin` flips a coin
@@ -18,9 +18,14 @@ Arguments with `?` mean that it is optional
 * `echo <string>` sends everything after the keyword `echo lorem ipsum`
 * `help` sends a help message
 * `img <index?>` sends random or certain image from folder `img 1`
-* `ping` tests bots latency
+* `ping` get bot latency
 * `purge <num>` deletes #num messages `purge 16`
-* `quote <index?>` sends a random or certain quote from `quotes.txt` file
+* `quote <index?>` sends a random or certain quote from `./src/misc/quotes.txt` file `quote 39`
 * `rps <move>` play rock, paper scissors with the bot `rps paper`
+
+## To Do
+
+* `prefix <prefix>` changes the bot's prefix `prefix ,`
+* `serverinfo` server owner, date of creation, member count and other information about the server
 
 *If you want to contribute or spot a bug, please contact me.*

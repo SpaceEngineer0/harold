@@ -7,7 +7,9 @@ module.exports = {
 	regex: /^coin$/,
 	permissions: [],
 	execute(message, args, client, Discord) {
-		const result = ['heads', 'tails'];
-		message.reply(`Flipped ${result[Math.floor(Math.random() * (2 - 0) + 0)]}`);
+		message.channel.send(new Discord.MessageEmbed()
+			.setColor(client.embedColor)
+			.addField('Coin', `Flipped ${['heads', 'tails'][Math.floor(Math.random() * 2)]}`)
+		)
 	}
 }

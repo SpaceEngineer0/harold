@@ -4,9 +4,9 @@ module.exports = {
 	usage: 'purge <num>',
 	example: 'purge 16',
 	type: 'moderation',
-	regex: /^purge [0-9]+$/,
+	regex: /^purge \d+$/,
 	permissions: ['MANAGE_MESSAGES'],
-	async execute(message, args, client) {
+	async execute(message, args, client, Discord) {
 		const limit = parseInt(args[0], 10) + 1;
 
 		if (limit < 1 || limit > 150) {

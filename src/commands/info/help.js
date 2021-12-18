@@ -6,9 +6,7 @@ module.exports = {
 	type: 'misc',
 	regex: /^help$/,
 	permissions: [],
-	execute(message, args, client) {
-		const { prefix } = require('../../../config.json'), Discord = require('discord.js');
-
+	execute(message, args, client, Discord) {
 		const generateString = () => {
 			var string = [];
 
@@ -20,16 +18,14 @@ module.exports = {
 		}
 
 		message.channel.send(new Discord.MessageEmbed()
-		.setColor('#3db2c4')
-		.setTitle('help')
-		.addFields({
-			name: 'info',
-			value: `Prefix: \`${prefix}\`\nArguments with \`?\` mean that it is optional`
-		}, {
-			name: 'commands',
-			value: generateString()
-		})
-		.setFooter('harold, https://github.com/SpaceEngie'));
+			.setColor(client.embedColor)
+			.setTitle('help')
+			.addFields({
+				name: 'info',
+				value: `Prefix: \`${client.prefix}\`\nArguments with \`?\` are optional`
+			}, { name: 'commands', value: generateString() })
+			.setFooter('https://github.com/SpaceEngie')
+		)
 
 	}
 }
