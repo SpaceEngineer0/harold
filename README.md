@@ -1,8 +1,6 @@
 # harold
 
-Simple discord bot with handful of commands.
-
-It can flip a coin, tell a joke, or play rock paper scissors.
+Simple discord bot with handful of commands. It can flip a coin, tell a joke, or play rock paper scissors.
 
 Insert your bot token in the `config.json` file, then type `node .` in the terminal. The bot will be ready in a few seconds.
 
@@ -22,10 +20,10 @@ Arguments with `?` are optional
 * `purge <num>` deletes #num messages `purge 16`
 * `quote <index?>` sends a random or certain quote from `./src/misc/quotes.txt` file `quote 39`
 * `rps <move>` play rock, paper scissors with the bot `rps paper`
+* `serverinfo` sends important information about the server
 
 ## To Do
 
-* `prefix <prefix>` changes the bot's prefix `prefix ,`
-* `serverinfo` server owner, date of creation, member count and other information about the server
+* `prefix <new prefix>` changes the bot's prefix `prefix ,`
 
 *If you want to contribute or spot a bug, please contact me.*

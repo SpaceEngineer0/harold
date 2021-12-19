@@ -16,7 +16,7 @@ module.exports = {
 
 		message.channel.send(new Discord.MessageEmbed()
 			.setColor(client.embedColor)
-			.setTitle('chelp')
+			.setTitle('CHelp')
 			.addField(`${args[0]}`, `command help\`${usage}\` ${desc}, type: ${type}`)
 		)
 	}

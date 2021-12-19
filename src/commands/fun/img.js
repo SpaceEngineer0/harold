@@ -10,37 +10,19 @@ module.exports = {
 	permissions: [],
 	execute(message, args, client, Discord) {
 		// 	// FIXME: images in embeds
-
-		// const dirLength = require('fs').readdirSync(`./images/harold/`).filter(file => file.endsWith('.png')).length;
-
-		// if (!args[0]) args[0] = Math.floor(Math.random() * (dirLength - 1) + 1)
-
-		// if (args[0]) {
-		// 	parseInt(args[0], 10);
-
-		// 	if (args[0] < 0 || args[0] > dirLength) {
-		// 		message.reply('That image doesn\'t exist');
-		// 		return;
-		// 	}
-
 		// 	// message.channel.send(`Photo nr ${args[0]}`, { files: [`./images/harold/${args[0]}.png`] });
 
+		const dirLength = require('fs').readdirSync(`./images/harold/`).filter(file => file.endsWith('.png')).length;
 
-		// 	const file = new MessageAttachment(`./images/harold/${args[0]}.png`, `${args[0]}.png`);
+		if (!args[0]) args[0] = Math.floor(Math.random() * (dirLength - 1) + 1)
 
-		// 	message.channel.send(new Discord.MessageEmbed()
-		// 		.setColor(client.embedColor)
-		// 		.addField('Img', `Photo nr ${args[0]}`)
-		// 		.setImage(`attachment://${args[0]}.png`),
-		// 		{ files: [file] }
-		// 	)
-		// }
-		// else {
+		parseInt(args[0], 10);
 
-		// 	message.channel.send(new Discord.MessageEmbed()
-		// 		.setColor(client.embedColor)
-		// 		.addField('Img', `Photo nr ${args[0]}`)
-		// 	)
-		// }
+		if (args[0] < 0 || args[0] > dirLength) {
+			message.reply('That image doesn\'t exist');
+			return;
+		}
+
+		message.channel.send({ content: `Photo nr ${args[0]}`, files: [`./images/harold/${args[0]}.png`] });
 	}
 }

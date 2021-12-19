@@ -19,7 +19,7 @@ module.exports = {
 
 		message.channel.send(new Discord.MessageEmbed()
 			.setColor(client.embedColor)
-			.setTitle('help')
+			.setTitle('Help')
 			.addFields({
 				name: 'info',
 				value: `Prefix: \`${client.prefix}\`\nArguments with \`?\` are optional`
