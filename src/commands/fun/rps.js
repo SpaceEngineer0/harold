@@ -14,7 +14,7 @@ module.exports = {
 
 		const rng = Math.floor(Math.random() * 3);
 		const move = ['rock', 'paper', 'scissors'][rng];
-		const emoji = ['<:rock:921147956378370108>', '<:page_with_curl:922759303339860029>', '<:scissors:921149049896337459>'][rng];
+		const emoji = ['<:rock:921147956378370108>', '<:page_facing_up:922767856595251221>', '<:scissors:921149049896337459>'][rng];
 
 		var embed = win => {
 			message.channel.send({ embeds: [new Discord.MessageEmbed()
