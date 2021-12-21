@@ -2,7 +2,7 @@ module.exports = {
 	name: 'coin',
 	desc: 'flips a coin',
 	usage: 'coin',
-	example: 'coin',
+	example: null,
 	type: 'fun',
 	regex: /^coin$/,
 	permissions: [],

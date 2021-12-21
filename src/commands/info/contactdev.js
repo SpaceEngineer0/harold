@@ -2,7 +2,7 @@ module.exports = {
 	name: 'contactdev',
 	desc: 'get contact info of harold\'s creator',
 	usage: 'contactdev',
-	example: 'contactdev',
+	example: null,
 	type: 'info',
 	regex: /^contactdev$/,
 	permissions: [],
@@ -11,7 +11,7 @@ module.exports = {
 			.setColor(client.embedColor)
 			.setTitle('Contact Dev')
 			.addFields(
-				{ name: 'Info', value: `harold is a small and simple Discord bot. It has many fun commands to make servers more interesting.` },
+				{ name: 'Info', value: `harold is a small and simple Discord bot. It has many commands to make servers more interesting.` },
 				{ name: 'Contacts', value: `
 Discord: <@658417195147067442>
 Discord Server: https://discord.gg/7R9abrnyJ6

@@ -12,12 +12,17 @@ module.exports = {
 			return;
 		}
 
-		const { desc, usage, type } = client.commands.get(args[0]);
+		const { desc, usage, example, type } = client.commands.get(args[0]);
+
+		const checkEg = example => {
+			if (example === null) return '';
+			else return `\`${example}\` `;
+		}
 
 		message.channel.send({ embeds: [new Discord.MessageEmbed()
 			.setColor(client.embedColor)
-			.setTitle('CHelp')
-			.addField(`${args[0]}`, `command help\`${usage}\` ${desc}, type: ${type}`)
+			.setTitle('Command Help')
+			.addField(args[0], `\`${usage}\` ${desc} ${checkEg(example)}}\`type: ${type}\``)
 			.setFooter('https://github.com/SpaceEngie/harold')
 		]})
 	}

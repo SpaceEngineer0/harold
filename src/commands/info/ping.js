@@ -2,7 +2,7 @@ module.exports = {
 	name: 'ping',
 	desc: 'tests if bot is online',
 	usage: 'ping',
-	example: 'ping',
+	example: null,
 	type: 'misc',
 	regex: /^ping$/,
 	permissions: [],

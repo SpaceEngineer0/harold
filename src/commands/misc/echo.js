@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'echo',
-	desc: 'sends everything after the keyword',
+	desc: 'repeats a phrase',
 	usage: 'echo <string>',
 	example: 'echo lorem ipsum',
 	type: 'misc',

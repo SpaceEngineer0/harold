@@ -2,7 +2,7 @@ module.exports = {
 	name: 'serverinfo',
 	desc: 'get information about the server',
 	usage: 'serverinfo',
-	example: 'serverinfo',
+	example: null,
 	type: 'info',
 	regex: /^serverinfo$/,
 	permissions: [],

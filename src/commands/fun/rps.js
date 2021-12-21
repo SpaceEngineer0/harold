@@ -16,7 +16,7 @@ module.exports = {
 		const move = ['rock', 'paper', 'scissors'][rng];
 		const emoji = ['<:rock:921147956378370108>', '<:page_facing_up:922767856595251221>', '<:scissors:921149049896337459>'][rng];
 
-		var embed = win => {
+		const embed = win => {
 			message.channel.send({ embeds: [new Discord.MessageEmbed()
 				.setColor(client.embedColor)
 				.addField('RPS', `${emoji} ${win}`)

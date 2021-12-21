@@ -17,6 +17,8 @@ Arguments with `?` are optional
 * `echo <string>` sends everything after the keyword `echo lorem ipsum`
 * `help` sends a help message
 * `img <index?>` sends random or certain image from folder `img 1`
+* `morsenotation` get morse code notation (`morse-tr` module)
+* `morsetr <morse/text>` translate morse code using `morse-tr` module `morsetr .- -... -.-.`
 * `ping` get bot latency
 * `prefix <new prefix>` changes the bot's prefix `prefix ,`
 * `purge <num>` deletes #num messages `purge 16`
@@ -32,3 +34,7 @@ Arguments with `?` are optional
 ## Collaborate
 
 If you want to contribute or spot a bug, please contact me.
+
+---
+
+This Discord bot uses [morse-tr](https://github.com/SpaceEngie/morse-tr) module for morse code operations.

@@ -18,11 +18,8 @@ module.exports = {
 		if (!command.regex.test(message.content.slice(client.prefix.length))) return;
 
 		try {
-			if (command.permissions.length > 0) {
-				if (message.member.hasPermission(command.permissions)) execute();
-				else message.reply(`You don\'t have the required permissions: [${command.permissions}]`);
-			}
-			else execute();
+			if (message.member.permissions.has(command.permissions || [])) execute();
+			else message.reply(`You don\'t have the required permissions: [${command.permissions || []}]`);
 		}
 		catch (err) {
 			message.reply('There was an error trying to execute that command!');

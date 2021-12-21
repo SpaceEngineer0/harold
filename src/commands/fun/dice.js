@@ -2,7 +2,7 @@ module.exports = {
 	name: 'dice',
 	desc: 'rolls an #n-side dice',
 	usage: 'dice <n?>',
-	example: 'dice 20',
+	example: 'dice 12',
 	type: 'fun',
 	regex: /^dice( \d+)?$/,
 	permissions: [],
