@@ -19,6 +19,9 @@ module.exports = {
 			return;
 		}
 
-		message.channel.send(`Quote nr ${args[0] + 1}: ${quotes[args[0]]}`);
+		message.channel.send({ embeds: [new Discord.MessageEmbed()
+			.setColor(client.embedColor)
+			.addField('Quote', `Quote nr ${args[0] + 1}: ${quotes[args[0]]}`)
+		]})
 	}
 }

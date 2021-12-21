@@ -1,6 +1,11 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
 const config = require('./config.json');
+const client = new Discord.Client({
+	intents: [
+		Discord.Intents.FLAGS.GUILDS,
+		Discord.Intents.FLAGS.GUILD_MESSAGES
+	]
+})
 
 console.log('> Starting up...');
 
@@ -10,5 +15,5 @@ client.events = new Discord.Collection();
 client.embedColor = config.embedColor;
 client.prefix = config.prefix;
 
-require('./src/handlers/commandHandler')(client, Discord);
-require('./src/handlers/eventHandler')(client, Discord);
+require('./src/handlers/command-handler')(client, Discord);
+require('./src/handlers/event-handler')(client, Discord);

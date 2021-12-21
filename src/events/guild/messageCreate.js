@@ -1,5 +1,5 @@
 module.exports = {
-	name: 'message',
+	name: 'messageCreate',
 	once: false,
 	execute(message, client, Discord) {
 		const args = message.content.slice(client.prefix.length).trim().split(/ +/);

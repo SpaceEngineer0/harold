@@ -11,21 +11,20 @@ module.exports = {
 			var string = [];
 
 			client.commands.forEach(command => {
-				string.push(`\`${command.usage}\` ${command.desc}, type: ${command.type}`);
+				string.push(`\`${command.usage}\` ${command.desc}, type: \`${command.type}\``);
 			})
 
 			return string.join('\n');
 		}
 
-		message.channel.send(new Discord.MessageEmbed()
+		message.channel.send({ embeds: [new Discord.MessageEmbed()
 			.setColor(client.embedColor)
 			.setTitle('Help')
-			.addFields({
-				name: 'info',
-				value: `Prefix: \`${client.prefix}\`\nArguments with \`?\` are optional`
-			}, { name: 'commands', value: generateString() })
-			.setFooter('https://github.com/SpaceEngie')
-		)
+			.addFields(
+				{ name: 'info', value: `Prefix: \`${client.prefix}\`\nArguments with \`?\` are optional` },
+				{ name: 'commands', value: generateString() })
+			.setFooter('https://github.com/SpaceEngie/harold')
+		]})
 
 	}
 }

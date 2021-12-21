@@ -14,10 +14,11 @@ module.exports = {
 
 		const { desc, usage, type } = client.commands.get(args[0]);
 
-		message.channel.send(new Discord.MessageEmbed()
+		message.channel.send({ embeds: [new Discord.MessageEmbed()
 			.setColor(client.embedColor)
 			.setTitle('CHelp')
 			.addField(`${args[0]}`, `command help\`${usage}\` ${desc}, type: ${type}`)
-		)
+			.setFooter('https://github.com/SpaceEngie/harold')
+		]})
 	}
 }

@@ -7,9 +7,10 @@ module.exports = {
 	regex: /^coin$/,
 	permissions: [],
 	execute(message, args, client, Discord) {
-		message.channel.send(new Discord.MessageEmbed()
+		message.channel.send({ embeds: [new Discord.MessageEmbed()
 			.setColor(client.embedColor)
-			.addField('Coin', `Flipped ${['heads', 'tails'][Math.floor(Math.random() * 2)]}`)
-		)
+			.addField('Coin', `<:coin:922758975915692043> Flipped ${['heads', 'tails'][Math.floor(Math.random() * 2)]}`)
+			.setFooter(message.author.username)
+		]})
 	}
 }

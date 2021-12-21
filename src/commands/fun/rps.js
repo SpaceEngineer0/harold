@@ -14,24 +14,28 @@ module.exports = {
 
 		const rng = Math.floor(Math.random() * 3);
 		const move = ['rock', 'paper', 'scissors'][rng];
-		const emoji = ['<:rock:921147956378370108>', '<:newspaper:920726420785868840>', '<:scissors:921149049896337459>'][rng];
+		const emoji = ['<:rock:921147956378370108>', '<:page_with_curl:922759303339860029>', '<:scissors:921149049896337459>'][rng];
 
-		var embed = (fields) => new Discord.MessageEmbed()
-			.setColor(client.embedColor)
-			.addFields(fields)
+		var embed = win => {
+			message.channel.send({ embeds: [new Discord.MessageEmbed()
+				.setColor(client.embedColor)
+				.addField('RPS', `${emoji} ${win}`)
+				.setFooter(message.author.username)
+			]})
+		}
 
-		if (args[0].charAt(0) === move.charAt(0)) message.channel.send(embed({ name: 'RPS', value: `${emoji}, tie` }));
+		if (args[0].charAt(0) === move.charAt(0)) embed('tie');
 		else if (args[0].charAt(0) === 'r') {
-			if (move.charAt(0) === 's') message.channel.send(embed({ name: 'RPS', value: `${emoji}, you win` }));
-			else message.channel.send(embed({ name: 'RPS', value: `${emoji}, I win` }));
+			if (move.charAt(0) === 's') embed('you win');
+			else embed('I win');
 		}
 		else if (args[0].charAt(0) === 'p') {
-			if (move.charAt(0) === 'r') message.channel.send(embed({ name: 'RPS', value: `${emoji}, you win` }));
-			else message.channel.send(embed({ name: 'RPS', value: `${emoji}, I win` }));
+			if (move.charAt(0) === 'r') embed('you win');
+			else embed('I win');
 		}
 		else if (args[0].charAt(0) === 's') {
-			if (move.charAt(0) === 'p') message.channel.send(embed({ name: 'RPS', value: `${emoji}, you win` }));
-			else message.channel.send(embed({ name: 'RPS', value: `${emoji}, I win` }));
+			if (move.charAt(0) === 'p') embed('you win');
+			else embed('I win');
 		}
 	}
 }

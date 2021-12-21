@@ -1,5 +1,3 @@
-const { MessageAttachment } = require('discord.js');
-
 module.exports = {
 	name: 'img',
 	desc: 'sends random or certain image from folder',
@@ -23,6 +21,15 @@ module.exports = {
 			return;
 		}
 
-		message.channel.send({ content: `Photo nr ${args[0]}`, files: [`./images/harold/${args[0]}.png`] });
+		// message.channel.send({ content: `Photo nr ${args[0]}`, files: [`./images/harold/${args[0]}.png`] });
+
+		const attachment = new Discord.MessageAttachment(`./images/harold/${args[0]}.png`, 'harold.png');
+		message.channel.send({
+			embeds: [new Discord.MessageEmbed()
+				.setColor(client.embedColor)
+				.addField('Img', `Photo nr ${args[0]}`)
+				.setImage('attachment://harold.png')],
+			files: [attachment] }
+		)
 	}
 }

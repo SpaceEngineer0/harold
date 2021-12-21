@@ -12,9 +12,10 @@ module.exports = {
 		parseInt(args[0], 10);
 		args[0]++;
 
-		message.channel.send(new Discord.MessageEmbed()
+		message.channel.send({ embeds: [new Discord.MessageEmbed()
 			.setColor(client.embedColor)
-			.addField('Dice', `Rolled ${Math.floor(Math.random() * (args[0] - 1) + 1)}`)
-		)
+			.addField('Dice', `<:diamond_shape_with_a_dot_inside:922759561025298432> Rolled ${Math.floor(Math.random() * (args[0] - 1) + 1)}`)
+			.setFooter(message.author.username)
+		]})
 	}
 }
