@@ -9,13 +9,15 @@ module.exports = {
 
 		if (!client.commands.has(commandName) || !message.content.startsWith(client.prefix) || message.author.bot) return;
 
+		message.content = message.content.slice(client.prefix.length).trim();
+
 		const command = client.commands.get(commandName);
 		const execute = () => {
 			console.log(`= Executing ${command.name} command in #${message.channel.name}. Arguments: [${args}]`);
 			command.execute(message, args, client, Discord);
 		}
 
-		if (!command.regex.test(message.content.slice(client.prefix.length))) return;
+		if (!command.regex.test(message.content)) return;
 
 		try {
 			if (message.member.permissions.has(command.permissions || [])) execute();
