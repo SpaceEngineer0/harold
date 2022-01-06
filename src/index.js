@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const config = require('./config.json');
+const config = require('../config.json');
 const client = new Discord.Client({
 	intents: [
 		Discord.Intents.FLAGS.GUILDS,
@@ -15,5 +15,5 @@ client.events = new Discord.Collection();
 client.embedColor = config.embedColor;
 client.prefix = config.prefix;
 
-require('./src/handlers/command-handler')(client, Discord);
-require('./src/handlers/event-handler')(client, Discord);
+require('./handlers/command-handler')(client, Discord);
+require('./handlers/event-handler')(client, Discord);

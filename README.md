@@ -2,7 +2,8 @@
 
 Simple discord bot with handful of commands. It can flip a coin, tell a joke, or play rock paper scissors.
 
-Insert your bot token in the `config.json` file, then type `node .` in the terminal. The bot will be ready in a few seconds.
+Insert your bot token in the `config.json` file,
+then type `node .` or `npm run startBot` in the terminal. The bot will be ready in a few seconds.
 
 ## commands
 
@@ -28,8 +29,8 @@ Arguments with `?` are optional
 
 ## To Do
 
-* `blackjack` play blackjack with the bot
-* `hangman` play hangman with the bot
+* `blackjack` play blackjack
+* `hangman` play hangman
 
 ## Collaborate
 
@@ -37,4 +38,4 @@ If you want to contribute or spot a bug, please contact me.
 
 ---
 
-This Discord bot uses [morse-tr](https://github.com/SpaceEngie/morse-tr) module for morse code operations.
+This repository uses [morse-tr](https://github.com/SpaceEngie/morse-tr) module for morse code operations.

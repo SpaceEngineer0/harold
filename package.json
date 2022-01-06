@@ -2,12 +2,16 @@
   "name": "harold-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "startBot": "node ./src/index.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "SpaceEngie",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SpaceEngie/harold"
+  },
+  "license": "MIT",
   "dependencies": {
     "discord.js": "^13.3.1",
     "fs": "0.0.1-security",
