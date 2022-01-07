@@ -7,6 +7,6 @@ module.exports = {
 	regex: /^echo .+$/,
 	permissions: [],
 	execute(message, args, client, Discord) {
-		message.channel.send(message.content.slice(6));
+		message.channel.send(message.content.slice(5));
 	}
 }

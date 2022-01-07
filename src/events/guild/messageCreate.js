@@ -13,7 +13,7 @@ module.exports = {
 
 		const command = client.commands.get(commandName);
 		const execute = () => {
-			console.log(`= Executing ${command.name} command in #${message.channel.name}. Arguments: [${args.join(', ')}]`);
+			console.log(`= Executing ${command.name} command in #${message.channel.name}. Arguments:`, args);
 			command.execute(message, args, client, Discord);
 		}
 
