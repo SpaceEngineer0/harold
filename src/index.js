@@ -15,5 +15,4 @@ client.events = new Discord.Collection();
 client.embedColor = config.embedColor;
 client.prefix = config.prefix;
 
-require('./handlers/command-loader')(client, Discord);
-require('./handlers/event-loader')(client, Discord);
+require('./loader')(client, Discord);

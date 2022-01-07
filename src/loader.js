@@ -1,11 +1,9 @@
 module.exports = (client, Discord) => {
 	const { readdirSync, readdir } = require('fs');
 
-	console.log('* Loading commands');
-
 	const requiredir = path => {
 		readdirSync(`./src/commands/${path}`).filter(file => file.endsWith('.js')).forEach(file => {
-			const command = require(`../commands/${path}/${file}`);
+			const command = require(`./commands/${path}/${file}`);
 			client.commands.set(command.name, command);
 		})
 	}
@@ -20,8 +18,13 @@ module.exports = (client, Discord) => {
 			requiredir(dir)
 		});
 	})
-
 	requiredir('');
 
-	console.log('* Loaded commands');
+	['client', 'guild'].forEach(dir => {
+		readdirSync(`./src/events/${dir}/`).filter(file => file.endsWith('.js')).forEach(file => {
+			const event = require(`./events/${dir}/${file}`);
+			if (event.once) client.once(event.name, (...args) => event.execute(...args, client, Discord));
+			else client.on(event.name, (...args) => event.execute(...args, client, Discord));
+		})
+	})
 }
