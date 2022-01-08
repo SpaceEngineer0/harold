@@ -32,10 +32,6 @@ Arguments with `?` are optional
 * `blackjack` play blackjack
 * `hangman` play hangman
 
-## Collaborate
+## Contribute
 
 If you want to contribute or spot a bug, please contact me.
-
----
-
-This repository uses [morse-tr](https://github.com/SpaceEngie/morse-tr) module for morse code operations.

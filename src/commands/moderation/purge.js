@@ -7,9 +7,9 @@ module.exports = {
 	regex: /^purge \d+$/,
 	permissions: ['MANAGE_MESSAGES'],
 	execute(message, args, client, Discord) {
-		const limit = parseInt(args[0], 10) + 1;
+		const amount = parseInt(args[0], 10) + 1;
 
-		if (limit < 1 || limit > 150) {
+		if (amount < 1 || amount > 150) {
 			message.reply('You can only delete between 1 and 150 messages');
 			return;
 		};
@@ -21,7 +21,7 @@ module.exports = {
 			return;
 		};
 
-		const fetched = message.channel.messages.fetch({ limit: limit });
+		const fetched = message.channel.messages.fetch({ limit: amount });
 
 		try { message.channel.bulkDelete(fetched) }
 		catch (err) {

@@ -7,7 +7,7 @@ const client = new Discord.Client({
 	]
 })
 
-console.log('> Starting up...');
+console.log('Starting up...');
 
 client.login(config.token);
 client.commands = new Discord.Collection();
