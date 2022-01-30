@@ -11,20 +11,20 @@ Default prefix: `,`
 
 Arguments with `?` are optional
 
-* `chelp <command>` explains a command `chelp echo`
+* `chelp <command>` explains a command
 * `coin` flips a coin
-* `contactdev` get contact info of me
-* `dice <n?>` rolls an #n-side dice `dice 20`
-* `echo <string>` sends everything after the keyword `echo lorem ipsum`
+* `contactdev` get contact info about me
+* `dice <n?>` rolls an #n-side dice
+* `echo <string>` sends everything after the keyword
 * `help` sends a help message
-* `img <index?>` sends random or certain image from folder `img 1`
+* `img <index?>` sends random or certain image from folder
 * `morsenotation` get morse code notation (`morse-tr` module)
 * `morsetr <morse/text>` translate morse code using `morse-tr` module `morsetr .- -... -.-.`
 * `ping` get bot latency
-* `prefix <new prefix>` changes the bot's prefix `prefix ,`
-* `purge <num>` deletes #num messages `purge 16`
-* `quote <index?>` sends a random or certain quote from `./src/misc/quotes.txt` file `quote 39`
-* `rps <move>` play rock, paper scissors with the bot `rps paper`
+* `prefix <new prefix>` changes the bot's prefix
+* `purge <num>` deletes #num messages
+* `quote <index?>` sends a random or certain quote from `./src/misc/quotes.json` file
+* `rps <move>` play rock, paper scissors with the bot
 * `serverinfo` sends important information about the server
 
 ## To Do

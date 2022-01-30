@@ -2,8 +2,6 @@ module.exports = {
 	name: 'morsenota',
 	desc: 'diplay morse code notation',
 	usage: 'morsenota',
-	example: null,
-	type: 'misc',
 	regex: /^morsenota$/,
 	permissions: [],
 	execute(message, args, client, Discord) {

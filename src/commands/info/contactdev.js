@@ -2,8 +2,6 @@ module.exports = {
 	name: 'contactdev',
 	desc: 'get contact info of harold\'s creator',
 	usage: 'contactdev',
-	example: null,
-	type: 'info',
 	regex: /^contactdev$/,
 	permissions: [],
 	execute(message, args, client, Discord) {

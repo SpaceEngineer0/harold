@@ -2,8 +2,6 @@ module.exports = {
 	name: 'purge',
 	desc: 'deletes #num messages',
 	usage: 'purge <num>',
-	example: 'purge 10',
-	type: 'moderation',
 	regex: /^purge \d+$/,
 	permissions: ['MANAGE_MESSAGES'],
 	execute(message, args, client, Discord) {

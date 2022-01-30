@@ -2,8 +2,6 @@ module.exports = {
 	name: 'ping',
 	desc: 'tests if bot is online',
 	usage: 'ping',
-	example: null,
-	type: 'misc',
 	regex: /^ping$/,
 	permissions: [],
 	execute(message, args, client, Discord) {

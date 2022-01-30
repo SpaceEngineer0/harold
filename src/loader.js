@@ -1,5 +1,7 @@
+const { readdirSync, readdir } = require('fs');
+
 module.exports = (client, Discord) => {
-	const { readdirSync, readdir } = require('fs');
+	console.log('Loading files...');
 
 	const requiredir = path => {
 		readdirSync(`./src/commands/${path}`).filter(file => file.endsWith('.js')).forEach(file => {
@@ -27,4 +29,6 @@ module.exports = (client, Discord) => {
 			else client.on(event.name, (...args) => event.execute(...args, client, Discord));
 		})
 	})
+
+	console.log('Loaded all files');
 }

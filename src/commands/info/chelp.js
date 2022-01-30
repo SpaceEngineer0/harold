@@ -2,8 +2,6 @@ module.exports = {
 	name: 'chelp',
 	desc: 'explains a command',
 	usage: 'chelp <command>',
-	example: 'chelp echo',
-	type: 'misc',
 	regex: /^chelp \w+$/,
 	permissions: [],
 	execute(message, args, client, Discord) {
@@ -12,17 +10,12 @@ module.exports = {
 			return;
 		}
 
-		const { desc, usage, example, type } = client.commands.get(args[0]);
-
-		const checkEg = example => {
-			if (example === null) return '';
-			else return `\`${example}\` `;
-		}
+		const { desc, usage } = client.commands.get(args[0]);
 
 		message.channel.send({ embeds: [new Discord.MessageEmbed()
 			.setColor(client.embedColor)
 			.setTitle('Command Help')
-			.addField(args[0], `\`${usage}\` ${desc} ${checkEg(example)}}\`type: ${type}\``)
+			.addField(args[0], `\`${usage}\` ${desc}`)
 			.setFooter('https://github.com/SpaceEngie/harold')
 		]})
 	}
