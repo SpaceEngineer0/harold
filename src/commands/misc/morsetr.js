@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'morsetr',
 	desc: 'translate morse code using morse-tr module',
-	usage: 'morsetr <morse/text>',
+	usage: 'morsetr <morse|text>',
 	regex: /^morsetr (([.-]+|#)( \/ | ?))+|.+$/,
 	permissions: [],
 	execute(message, args, client, Discord) {

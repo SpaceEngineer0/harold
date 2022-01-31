@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'dice',
 	desc: 'rolls an #n-side dice',
-	usage: 'dice <n?>',
+	usage: 'dice [<n>]',
 	regex: /^dice( \d+)?$/,
 	permissions: [],
 	execute(message, args, client, Discord) {

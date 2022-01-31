@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'quote',
 	desc: 'sends a random or certain quote from a list',
-	usage: 'quote <index?>',
+	usage: 'quote [<index>]',
 	regex: /^quote( \d+)?$/,
 	permissions: [],
 	execute(message, args, client, Discord) {

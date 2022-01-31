@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'img',
 	desc: 'sends random or certain image from folder',
-	usage: 'img <index?>',
+	usage: 'img [<index>]',
 	regex: /^img( \d+)?$/,
 	permissions: [],
 	execute(message, args, client, Discord) {
