@@ -13,7 +13,9 @@ module.exports = {
 
 		const command = client.commands.get(commandName);
 		const execute = () => {
-			console.log(`Executing ${command.name} command in #${message.channel.name}. Arguments:`, args);
+			const header = `Executing ${command.name} command in #${message.channel.name}.`;
+			if (commandName === 'echo') console.log(header, `Message: '${message.content.slice(5)}'`);
+			else console.log(header, 'Arguments:', args);
 			command.execute(message, args, client, Discord);
 		}
 
@@ -21,7 +23,7 @@ module.exports = {
 
 		try {
 			if (message.member.permissions.has(command.permissions || [])) execute();
-			else message.reply(`You don\'t have the required permissions: [${command.permissions || []}]`);
+			else message.reply('You don\'t have the required permissions:', command.permissions);
 		}
 		catch (err) {
 			message.reply('There was an error trying to execute that command!');
