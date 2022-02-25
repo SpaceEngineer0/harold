@@ -16,7 +16,7 @@ module.exports = {
 			message.channel.send({ embeds: [new Discord.MessageEmbed()
 				.setColor(client.embedColor)
 				.addField('RPS', `${emoji} ${win}`)
-				.setFooter(`Played with ${message.author.username}`)
+				.setFooter({ text: `Played with ${message.author.username}` })
 			]})
 		}
 

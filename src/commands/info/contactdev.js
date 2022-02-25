@@ -17,7 +17,7 @@ Github: https://github.com/SpaceEngie
 YouTube: https://www.youtube.com/channel/UCCQ_6GbfuqqZO_lLLG1TdTw` },
 				{ name: 'Collaborate', value: 'If you have an idea of how to improve this bot, please contact me.' }
 			)
-			.setFooter('https://github.com/SpaceEngie/harold')
+			.setFooter({ text: 'https://github.com/SpaceEngie/harold' })
 		]})
 	}
 }

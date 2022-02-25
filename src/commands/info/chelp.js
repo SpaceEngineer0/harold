@@ -16,7 +16,7 @@ module.exports = {
 			.setColor(client.embedColor)
 			.setTitle('Command Help')
 			.addField(args[0], `\`${usage}\` ${desc}`)
-			.setFooter('https://github.com/SpaceEngie/harold')
+			.setFooter({ text: 'https://github.com/SpaceEngie/harold' })
 		]})
 	}
 }

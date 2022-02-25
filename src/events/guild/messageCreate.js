@@ -14,7 +14,8 @@ module.exports = {
 		const command = client.commands.get(commandName);
 		const execute = () => {
 			const header = `Executing ${command.name} command in #${message.channel.name}.`;
-			if (commandName === 'echo') console.log(header, `Message: '${message.content.slice(5)}'`);
+			if (commandName === 'echo' || commandName === 'morsetr')
+				console.log(header, `Message: '${message.content.slice(commandName.length + 1)}'`);
 			else console.log(header, 'Arguments:', args);
 			command.execute(message, args, client, Discord);
 		}

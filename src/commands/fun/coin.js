@@ -8,7 +8,7 @@ module.exports = {
 		message.channel.send({ embeds: [new Discord.MessageEmbed()
 			.setColor(client.embedColor)
 			.addField('Coin', `<:coin:922758975915692043> Flipped ${['heads', 'tails'][Math.floor(Math.random() * 2)]}`)
-			.setFooter(`Flipped by ${message.author.username}`)
+			.setFooter({ text: `Flipped by ${message.author.username}` })
 		]})
 	}
 }
