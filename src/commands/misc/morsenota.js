@@ -16,8 +16,6 @@ module.exports = {
 		morsetr.notation.numbers.forEach(number => numbers.push(morseChar(number)));
 		morsetr.notation.symbols.forEach(symbol => symbols.push(morseChar(symbol)));
 
-		const attachment = new Discord.MessageAttachment('./node_modules/morse-tr/morse-code.png', 'morse-code.png');
-
 		message.channel.send({ embeds: [new Discord.MessageEmbed()
 			.setColor(client.embedColor)
 			.setTitle('Morse Notation')
@@ -26,8 +24,7 @@ module.exports = {
 				{ name: 'Numbers', value: `${numbers.join('\n')}`, inline: true },
 				{ name: 'Symbols', value: `${symbols.join('\n')}`, inline: true }
 			)
-			.setImage('attachment://morse-code.png')
-			.setFooter('morse module: https://github.com/SpaceEngie/morse-tr')],
+			.setImage('attachment://morse-code.png')],
 			files: [attachment]}
 		)
 	}

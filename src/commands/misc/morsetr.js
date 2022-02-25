@@ -5,21 +5,21 @@ module.exports = {
 	regex: /^morsetr (([.-]+|#)( \/ | ?))+|.+$/,
 	permissions: [],
 	execute(message, args, client, Discord) {
-		const morsetr = require('morse-tr');
+		const morseTr = require('morse-tr');
 
-		const content = message.content.slice(8 + client.prefix.length);
+		const content = message.content.slice(8);
 
 		const embed = string => message.channel.send({ embeds: [new Discord.MessageEmbed()
 			.setColor(client.embedColor)
 			.setTitle('Morse Translator')
 			.addFields(
 				{ name: 'Translation', value: `\`${string}\`` },
-				{ name: 'Info', value: `Unknown characters are replaced with a \`${morsetr.notation.unknownChar}\`
-Type \`${client.prefix}morsenotation\` to get morse code notation` })
-			.setFooter(`${message.author.username} | morse module: https://github.com/SpaceEngie/morse-tr`)
+				{ name: 'Info', value: `Unknown characters are replaced with a \`${morseTr.notation.unknownChar}\`
+Type \`${client.prefix}morsenota\` to get morse code notation` })
+			.setFooter({ text: `Translated for ${message.author.username}` })
 		]})
 
-		if (morsetr.isValidMorse(content)) embed(morsetr.toText(content));
-		else embed(morsetr.toMorse(content));
+		if (morseTr.isValidMorse(content)) embed(morseTr.decrypt(content));
+		else embed(morseTr.encrypt(content));
 	}
 }
