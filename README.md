@@ -3,7 +3,7 @@
 Simple discord bot with handful of commands. It can flip a coin, tell a joke, or play rock paper scissors.
 
 Insert your bot token in the `config.json` file,
-then type `node .` or `npm run startBot` in the terminal. The bot will be ready in a few seconds.
+then type `node .` or `npm run startBot` in the terminal.
 
 ## commands
 
@@ -23,13 +23,4 @@ Default prefix: `,`
 * `purge <num>` deletes #num messages
 * `quote [<index>]` sends a random or certain quote from `./src/misc/quotes.json` file
 * `rps <your move>` play rock, paper scissors with the bot
-* `serverinfo` sends important information about the server
-
-## To Do
-
-* `blackjack` play blackjack
-* `hangman` play hangman
-
-## Contribute
-
-If you want to contribute or spot a bug, please contact me.
+* `serverinfo` get information about the server
