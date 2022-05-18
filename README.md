@@ -7,7 +7,7 @@ then type `node .` or `npm run startBot` in the terminal.
 
 ## commands
 
-Default prefix: `,`
+Default prefix is `,`
 
 * `chelp <command>` explains a command
 * `coin` flips a coin
@@ -20,7 +20,6 @@ Default prefix: `,`
 * `morsetr <morse|text>` translate morse code using `morse-tr` module `morsetr .- -... -.-.`
 * `ping` get bot latency
 * `prefix <new prefix>` changes the bot's prefix
-* `purge <num>` deletes #num messages
 * `quote [<index>]` sends a random or certain quote from `./src/misc/quotes.json` file
 * `rps <your move>` play rock, paper scissors with the bot
 * `serverinfo` get information about the server

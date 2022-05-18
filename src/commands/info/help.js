@@ -15,10 +15,9 @@ module.exports = {
 			.setColor(client.embedColor)
 			.setTitle('Help')
 			.addFields(
-				{ name: 'Info', value: `Prefix: \`${client.prefix}\`\nArguments with \`?\` are optional` },
+				{ name: 'Info', value: `Prefix: \`${client.prefix}\`\nArguments in \`[]\` are optional` },
 				{ name: 'Commands', value: generateMsg()})
 			.setFooter({ text: 'https://github.com/SpaceEngie/harold' })
 		]})
-
 	}
 }
