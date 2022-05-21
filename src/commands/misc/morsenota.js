@@ -23,9 +23,6 @@ module.exports = {
 				{ name: 'Letters', value: `${letters.join('\n')}`, inline: true },
 				{ name: 'Numbers', value: `${numbers.join('\n')}`, inline: true },
 				{ name: 'Symbols', value: `${symbols.join('\n')}`, inline: true }
-			)
-			.setImage('attachment://morse-code.png')],
-			files: [attachment]}
-		)
+			)]})
 	}
 }

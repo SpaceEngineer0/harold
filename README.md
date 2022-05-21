@@ -16,10 +16,9 @@ Default prefix is `,`
 * `echo <string>` sends everything after the keyword
 * `help` sends a help message
 * `img [<index>]` sends random or certain image from folder
-* `morsenotation` get morse code notation (`morse-tr` module)
-* `morsetr <morse|text>` translate morse code using `morse-tr` module `morsetr .- -... -.-.`
+* `morsenota` get morse code notation
+* `morsetr <morse|text>` translate morse code `morsetr .- -... -.-.`
 * `ping` get bot latency
 * `prefix <new prefix>` changes the bot's prefix
 * `quote [<index>]` sends a random or certain quote from `./src/misc/quotes.json` file
 * `rps <your move>` play rock, paper scissors with the bot
-* `serverinfo` get information about the server
