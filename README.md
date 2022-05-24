@@ -2,6 +2,8 @@
 
 Simple discord bot with handful of commands. It can flip a coin, tell a joke, or play rock paper scissors.
 
+[Bot showcase video](https://www.youtube.com/watch?v=Os8SxTsFq4I)
+
 Insert your bot token in the `config.json` file,
 then type `node .` or `npm run startBot` in the terminal.
 
@@ -21,4 +23,4 @@ Default prefix is `,`
 * `ping` get bot latency
 * `prefix <new prefix>` changes the bot's prefix
 * `quote [<index>]` sends a random or certain quote from `./src/misc/quotes.json` file
-* `rps <your move>` play rock, paper scissors with the bot
+* `rps <your move>` play rock, paper, scissors
