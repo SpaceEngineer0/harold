@@ -7,4 +7,4 @@ module.exports = {
 	execute(message, args, client, Discord) {
 		message.channel.send(message.content.slice(5));
 	}
-}
+};

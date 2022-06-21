@@ -18,7 +18,7 @@ module.exports = {
 				console.log(header, `Message: '${message.content.slice(commandName.length + 1)}'`);
 			else console.log(header, 'Arguments:', args);
 			command.execute(message, args, client, Discord);
-		}
+		};
 
 		if (!command.regex.test(message.content)) return;
 
@@ -29,6 +29,6 @@ module.exports = {
 		catch (err) {
 			message.reply('There was an error trying to execute that command!');
 			throw err;
-		}
+		};
 	}
-}
+};

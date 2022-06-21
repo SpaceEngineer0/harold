@@ -17,9 +17,9 @@ module.exports = {
 				{ name: 'Info', value: `Unknown characters are replaced with a \`${morseTr.notation.unknownChar}\`
 Type \`${client.prefix}morsenota\` to get morse code notation` })
 			.setFooter({ text: `Translated for ${message.author.username}` })
-		]})
+		]});
 
 		if (morseTr.isValidMorse(content)) embed(morseTr.decrypt(content));
 		else embed(morseTr.encrypt(content));
 	}
-}
+};

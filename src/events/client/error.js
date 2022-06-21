@@ -4,4 +4,4 @@ module.exports = {
 	execute(err, client, Discord) {
 		console.error(err);
 	}
-}
+};

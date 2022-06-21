@@ -14,6 +14,6 @@ module.exports = {
 		message.channel.send({ embeds: [new Discord.MessageEmbed()
 			.setColor(client.embedColor)
 			.addField('Prefix', `Prefix changed from \`${oldPrefix}\` to \`${config.prefix}\``)
-		]})
+		]});
 	}
-}
+};

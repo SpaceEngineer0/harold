@@ -9,6 +9,6 @@ module.exports = {
 			.setColor(client.embedColor)
 			.addField('Coin', `<:coin:922758975915692043> Flipped ${['heads', 'tails'][Math.floor(Math.random() * 2)]}`)
 			.setFooter({ text: `Flipped by ${message.author.username}` })
-		]})
+		]});
 	}
-}
+};

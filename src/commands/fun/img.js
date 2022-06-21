@@ -11,7 +11,7 @@ module.exports = {
 		if (index < 1 || index > dirLength) {
 			message.reply('That image doesn\'t exist');
 			return;
-		}
+		};
 
 		const attachment = new Discord.MessageAttachment(`./images/harold/${index}.png`, 'harold.png');
 		message.channel.send({
@@ -20,6 +20,6 @@ module.exports = {
 				.addField('Img', `Photo nr ${index}`)
 				.setImage('attachment://harold.png')],
 			files: [attachment] }
-		)
+		);
 	}
-}
+};

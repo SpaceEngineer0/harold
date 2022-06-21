@@ -8,7 +8,7 @@ module.exports = {
 		if (!args[0]) {
 			message.channel.send('Missing argument: [rock/paper/scissors]');
 			return;
-		}
+		};
 
 		const emoji = ['<:rock:921147956378370108>', '<:page_facing_up:922767856595251221>', '<:scissors:921149049896337459>'][Math.floor(Math.random() * 3)];
 
@@ -18,7 +18,7 @@ module.exports = {
 				.addField('RPS', `${emoji} ${win}`)
 				.setFooter({ text: `Played with ${message.author.username}` })
 			]})
-		}
+		};
 
 		if (args[0].charAt(0) === emoji.charAt(2)) embed('Tie');
 		else if (args[0].charAt(0) === 'r') {
@@ -32,6 +32,6 @@ module.exports = {
 		else if (args[0].charAt(0) === 's') {
 			if (emoji.charAt(2) === 'p') embed('you win');
 			else embed('I win');
-		}
+		};
 	}
-}
+};

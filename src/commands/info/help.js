@@ -9,7 +9,7 @@ module.exports = {
 			var message = [];
 			client.commands.forEach(command => message.push(`\`${command.usage}\` ${command.desc}`));
 			return message.join('\n');
-		}
+		};
 
 		message.channel.send({ embeds: [new Discord.MessageEmbed()
 			.setColor(client.embedColor)
@@ -18,6 +18,6 @@ module.exports = {
 				{ name: 'Info', value: `Prefix: \`${client.prefix}\`\nArguments in \`[]\` are optional` },
 				{ name: 'Commands', value: generateMsg()})
 			.setFooter({ text: 'https://github.com/SpaceEngie/harold' })
-		]})
+		]});
 	}
-}
+};

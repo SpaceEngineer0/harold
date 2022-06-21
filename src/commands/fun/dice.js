@@ -10,6 +10,6 @@ module.exports = {
 			.setColor(client.embedColor)
 			.addField('Dice', `<:diamond_shape_with_a_dot_inside:922759561025298432> Rolled ${Math.floor(Math.random() * sides) + 1}`)
 			.setFooter({ text: `Rolled by ${message.author.username}` })
-		]})
+		]});
 	}
-}
+};

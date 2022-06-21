@@ -5,7 +5,7 @@ const client = new Discord.Client({
 		Discord.Intents.FLAGS.GUILDS,
 		Discord.Intents.FLAGS.GUILD_MESSAGES
 	]
-})
+});
 
 console.log('Starting up...');
 

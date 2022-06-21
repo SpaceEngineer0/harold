@@ -12,11 +12,11 @@ module.exports = {
 		if (index == 0 || index >= quotes.length) {
 			message.reply('That quote doesn\'t exist');
 			return;
-		}
+		};
 
 		message.channel.send({ embeds: [new Discord.MessageEmbed()
 			.setColor(client.embedColor)
 			.addField('Quote', `Quote nr ${index}: ${quotes[index - 1]}`)
-		]})
+		]});
 	}
-}
+};
