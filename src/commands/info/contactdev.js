@@ -12,11 +12,11 @@ module.exports = {
 				{ name: 'Info', value: `harold is a small and simple Discord bot. It has a handful commands to make servers a little bit more interesting.` },
 				{ name: 'Contacts', value: `
 Discord: <@658417195147067442>
-Github: https://github.com/SpaceEngie
+Github: https://github.com/SpaceEngineer0
 YouTube: https://www.youtube.com/channel/UCCQ_6GbfuqqZO_lLLG1TdTw` },
 				{ name: 'Collaborate', value: 'If you have an idea of how to improve this bot, please contact me.' }
 			)
-			.setFooter({ text: 'https://github.com/SpaceEngie/harold' })
-		]})
+			.setFooter({ text: 'https://github.com/SpaceEngineer0/harold' })
+		]});
 	}
-}
+};

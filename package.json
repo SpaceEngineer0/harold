@@ -1,20 +1,24 @@
 {
   "name": "harold-bot",
-  "version": "1.1.5",
-  "description": "",
+  "version": "1.1.6",
+  "description": "Simple discord bot with handful of commands.",
   "main": "./src/index.js",
   "scripts": {
-    "startBot": "node ./src/index.js"
+    "startBot": "node ./src/index.js",
+    "startDev": "nodemon ./src/index.js"
   },
-  "author": "SpaceEngie",
+  "author": "SpaceEngineer0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SpaceEngie/harold"
+    "url": "https://github.com/SpaceEngineer0/harold"
   },
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^13.7.0",
+    "discord.js": "^13.8.0",
     "fs": "0.0.1-security",
-    "morse-tr": "^2.0.0"
+    "morse-tr": "2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }

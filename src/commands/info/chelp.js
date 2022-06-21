@@ -8,7 +8,7 @@ module.exports = {
 		if (!client.commands.has(args[0])) {
 			message.reply('That command doesn\'t exist');
 			return;
-		}
+		};
 
 		const { desc, usage } = client.commands.get(args[0]);
 
@@ -16,7 +16,7 @@ module.exports = {
 			.setColor(client.embedColor)
 			.setTitle('Command Help')
 			.addField(args[0], `\`${usage}\` ${desc}`)
-			.setFooter({ text: 'https://github.com/SpaceEngie/harold' })
-		]})
+			.setFooter({ text: 'https://github.com/SpaceEngineer0/harold' })
+		]});
 	}
-}
+};

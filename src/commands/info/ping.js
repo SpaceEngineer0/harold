@@ -7,7 +7,7 @@ module.exports = {
 	execute(message, args, client, Discord) {
 		message.channel.send({ embeds: [new Discord.MessageEmbed()
 			.setColor(client.embedColor)
-			.addField('Ping', `Latency is ${(Date.now() - message.createdTimestamp) * -1}ms. API latency is ${Math.round(client.ws.ping)}ms`)
-		]})
+			.addField('Ping', `Latency: ${(Date.now() - message.createdTimestamp) * -1}ms. API latency: ${Math.round(client.ws.ping)}ms`)
+		]});
 	}
-}
+};

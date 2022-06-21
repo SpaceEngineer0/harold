@@ -1,3 +1,5 @@
+const morseTr = require('morse-tr');
+
 module.exports = {
 	name: 'morsetr',
 	desc: 'translate morse code using morse-tr module',
@@ -5,8 +7,6 @@ module.exports = {
 	regex: /^morsetr (([.-]+|#)( \/ | ?))+|.+$/,
 	permissions: [],
 	execute(message, args, client, Discord) {
-		const morseTr = require('morse-tr');
-
 		const content = message.content.slice(8);
 
 		const embed = string => message.channel.send({ embeds: [new Discord.MessageEmbed()

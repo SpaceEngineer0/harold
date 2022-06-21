@@ -17,7 +17,7 @@ module.exports = {
 			.addFields(
 				{ name: 'Info', value: `Prefix: \`${client.prefix}\`\nArguments in \`[]\` are optional` },
 				{ name: 'Commands', value: generateMsg()})
-			.setFooter({ text: 'https://github.com/SpaceEngie/harold' })
+			.setFooter({ text: 'https://github.com/SpaceEngineer0/harold' })
 		]});
 	}
 };
